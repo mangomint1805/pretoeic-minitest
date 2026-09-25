@@ -24,13 +24,13 @@ Mở đường link ở trên, chọn bài thầy đã giao rồi bấm **Làm b
 |---|---|---|---|
 | 3 | Minitest 1 · Part 1 | Photographs · 6 câu · 10 phút | ✅ Đã mở |
 | 6 | Minitest 2 · Part 5 | Incomplete Sentences · 30 câu · 30 phút | ✅ Đã mở |
-| 9 | Minitest 3 · Part 2 | Question–Response | ⏳ Chưa mở |
+| 9 | Minitest 3 · Part 2 | Question–Response · 25 câu · 15 phút | ✅ Đã mở |
 | 12 | Progress Test 1 | Kiểm tra giữa khóa | ⏳ Chưa mở |
 | 13 | Minitest 4 · Part 6 | Text Completion · 16 câu · 16 phút | ✅ Đã mở |
-| 16 | Minitest 5 · Part 3 | Conversations | ⏳ Chưa mở |
-| 19 | Minitest 6 · Part 4 | Talks | ⏳ Chưa mở |
-| 22 | Minitest 7 · Part 7 | Reading Comprehension | ⏳ Chưa mở |
-| 24 | Progress Test 2 | Kiểm tra cuối khóa | ⏳ Chưa mở |
+| 16 | Minitest 5 · Part 3 | Conversations · 30 câu · 19 phút | ✅ Đã mở |
+| 19 | Minitest 6 · Part 7 | Reading Comprehension · 34 câu · 35 phút | ✅ Đã mở |
+| 22 | Minitest 7 · Part 4 | Talks · 18 câu · 14 phút | ✅ Đã mở |
+| 24 | Progress Test 2 | Kiểm tra cuối khóa · 200 câu · 120 phút | ✅ Đã mở |
 
 ---
 
