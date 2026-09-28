@@ -126,6 +126,14 @@ input.t{width:100%;font:16px 'IBM Plex Sans',sans-serif;padding:10px 12px;border
     <input class="t" id="inClass" autocomplete="off" placeholder="Ví dụ: TOEIC Pre 01">
   </div>
   <div class="card">
+    <b>Hướng dẫn: Part 5 · Điền vào câu (30 câu, câu 101–130)</b>
+    <ul class="rules">
+      <li>Mỗi câu có <b>1 chỗ trống</b>. Chọn từ hoặc cụm từ <b>(A), (B), (C), (D)</b> phù hợp nhất để hoàn thành câu.</li>
+      <li><b>Mẹo:</b> nhìn 4 đáp án trước. Nếu <b>khác từ loại</b> (danh từ, tính từ, trạng từ…) thì xét vị trí chỗ trống. Nếu <b>khác thì</b> thì tìm dấu hiệu thời gian. Nếu <b>khác nghĩa</b> thì đọc cả câu.</li>
+      <li>Làm nhanh câu dễ trước, câu khó để lại làm sau.</li>
+    </ul>
+  </div>
+  <div class="card">
     <b>Quy định làm bài</b>
     <ul class="rules">
       <li>Có thể làm bài trên <b>máy tính hoặc điện thoại</b>. Nếu dùng điện thoại: <b>tắt thông báo</b>, cắm sạc nếu pin yếu và <b>không để màn hình tự tắt</b>. Khóa màn hình, nghe điện thoại hay chuyển sang ứng dụng khác đều tính là rời khỏi trang.</li>
@@ -454,7 +462,7 @@ $('btnEarly').onclick=async()=>{
   const all=[...DATA.P1.map(q=>q.n),...DATA.P2,...DATA.P5.map(q=>q.n),...DATA.P6.flatMap(g=>g.qs.map(q=>q.n))];
   const un=all.filter(n=>!S.answers[n]).length;
   const extra = S.stage==='listening' ? ' Audio sẽ dừng và bạn sẽ không làm được phần Đọc.' : '';
-  const ok=await modal('Nộp bài sớm?', (un?'Bạn còn '+un+'/77 câu chưa trả lời, những câu này sẽ tính là sai.':'Bạn đã trả lời hết 77 câu.')+extra+' Sau khi nộp bạn không thể sửa bài.',{ok:'Nộp bài ngay',cancel:'Làm tiếp'});
+  const ok=await modal('Nộp bài sớm?', (un?'Bạn còn '+un+'/'+all.length+' câu chưa trả lời, những câu này sẽ tính là sai.':'Bạn đã trả lời hết '+all.length+' câu.')+extra+' Sau khi nộp bạn không thể sửa bài.',{ok:'Nộp bài ngay',cancel:'Làm tiếp'});
   if(ok) submit(false,'Học viên nộp sớm');
 };
 $('btnRetake').onclick=async()=>{
