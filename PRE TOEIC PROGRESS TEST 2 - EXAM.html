@@ -22,7 +22,7 @@ h2{font-family:'Lora','Times New Roman',serif;font-weight:500;font-size:22px;mar
 .btn:disabled{opacity:.45;cursor:not-allowed;}
 .btn.ghost{background:none;color:var(--paper);border-color:var(--hairline);}
 label.f{display:block;font-weight:600;font-size:14px;margin:14px 0 5px;}
-input.t{width:100%;font:16px 'IBM Plex Sans',sans-serif;padding:10px 12px;border:1px solid var(--hairline);border-radius:4px;background:var(--panel-2);color:var(--paper);-webkit-user-select:text;user-select:text;}
+input.t,select.t{width:100%;font:16px 'IBM Plex Sans',sans-serif;padding:10px 12px;border:1px solid var(--hairline);border-radius:4px;background:var(--panel-2);color:var(--paper);-webkit-user-select:text;user-select:text;}
 .rules{padding-left:20px;margin:8px 0;font-size:15px;}
 .rules li{margin:5px 0;}
 .agree{display:flex;gap:8px;align-items:flex-start;margin:16px 0;font-size:14.5px;}
@@ -127,8 +127,12 @@ input.t{width:100%;font:16px 'IBM Plex Sans',sans-serif;padding:10px 12px;border
   <div class="card">
     <label class="f" for="inName">Họ và tên</label>
     <input class="t" id="inName" autocomplete="off" placeholder="Ví dụ: Nguyễn Văn An">
-    <label class="f" for="inClass">Lớp / Mã học viên</label>
-    <input class="t" id="inClass" autocomplete="off" placeholder="Ví dụ: TOEIC Pre 01">
+    <label class="f" for="inClass">Lớp</label>
+    <select class="t" id="inClass">
+      <option value="">— Chọn lớp —</option>
+      <option value="PRE112385 (2-4-6, 17h45 - 19h15)">PRE112385 (2-4-6, 17h45 - 19h15)</option>
+      <option value="PRE115275 (3-5-7, 17h45 - 19h15)">PRE115275 (3-5-7, 17h45 - 19h15)</option>
+    </select>
   </div>
   <div class="card">
     <b>Hướng dẫn: 7 phần của bài (200 câu)</b>
@@ -528,7 +532,7 @@ $('btnRetake').onclick=async()=>{
 $('btnStart').onclick=()=>{
   const name=$('inName').value.trim().replace(/\s+/g,' '), cls=$('inClass').value.trim().replace(/\s+/g,' ');
   if(name.length<2){ $('startErr').textContent='Vui lòng nhập họ và tên.'; return; }
-  if(!cls){ $('startErr').textContent='Vui lòng nhập lớp / mã học viên.'; return; }
+  if(!cls){ $('startErr').textContent='Vui lòng chọn lớp.'; return; }
   if(!$('chkAgree').checked){ $('startErr').textContent='Vui lòng đánh dấu đồng ý với quy định.'; return; }
   const p5=(SHUFFLE?shuffle(DATA.P5):DATA.P5).map(q=>({n:q.n,perm:SHUFFLE?shuffle([0,1,2,3]):[0,1,2,3]}));
   const p6={}; DATA.P6.forEach(g=>g.qs.forEach(q=>p6[q.n]=SHUFFLE?shuffle([0,1,2,3]):[0,1,2,3]));
